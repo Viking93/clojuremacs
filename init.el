@@ -232,6 +232,8 @@
 (bind-key "M-s p" 'projectile-switch-project)
 (bind-key "M-s f" 'projectile-find-file)
 (bind-key "M-s g" 'projectile-grep)
+(bind-key "M-z" 'undo)
+(bind-key "C-M-z" 'redo)
 
 (bind-key
  "C-x C-c"
@@ -244,6 +246,7 @@
 ;; Alias
 
 (defalias 'yes-or-no-p 'y-or-n-p)
+(defalias 'redo 'undo-tree-redo)
 
 ;; For smart mode line
 (setq sml/theme 'respectful)
@@ -262,3 +265,5 @@
 (setq projectile-require-project-root nil)
 (setq projectile-completion-system 'ido)
 
+;; settings for undo-tree
+(global-undo-tree-mode 1)
