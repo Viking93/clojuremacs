@@ -142,6 +142,11 @@
 ;; Company mode
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; Highlight brackets and expressions
+(setq show-paren-style 'parenthesis)
+(setq show-paren-style 'mixed)
+(setq show-paren-style 'expression)
+
 ;; diff-hl
 (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
