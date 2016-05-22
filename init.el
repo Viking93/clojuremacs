@@ -25,6 +25,7 @@
     auto-complete
     magit
     projectile
+    smex
     flx-ido
     smart-mode-line
     bind-key
@@ -267,3 +268,12 @@
 
 ;; settings for undo-tree
 (global-undo-tree-mode 1)
+
+;; smex
+
+(require 'smex)
+(smex-initialize)
+(bind-key "M-x" 'smex)
+(bind-key "M-X" 'smex-major-mode-commands)
+;; old M-x.
+(bind-key "C-c C-c M-x" 'execute-extended-command)
