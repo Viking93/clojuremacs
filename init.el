@@ -277,3 +277,9 @@
 (bind-key "M-X" 'smex-major-mode-commands)
 ;; old M-x.
 (bind-key "C-c C-c M-x" 'execute-extended-command)
+
+;; Org-Mode
+(require 'org)
+(bind-key "C-c l" 'org-store-link)
+(bind-key "C-c a" 'org-agenda)
+(setq org-log-done t)
